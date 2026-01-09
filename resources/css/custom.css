@@ -1,0 +1,364 @@
+/* University Hostel Management Custom Styles */
+
+:root {
+    --light-blue: #87CEEB;
+    --light-orange: #FFB347;
+    --primary-blue: #4A90E2;
+    --primary-orange: #FF8C42;
+    --white: #FFFFFF;
+    --dark-blue: #2C5282;
+    --dark-orange: #E67E22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 50%, var(--light-orange) 100%);
+    min-height: 100vh;
+}
+
+/* Navigation Styles */
+.navbar-custom {
+    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--light-blue) 50%, var(--primary-orange) 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--white) !important;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--light-orange) !important;
+    transform: translateY(-2px);
+}
+
+/* Button Styles */
+.btn-primary-custom {
+    background: linear-gradient(45deg, var(--primary-blue), var(--light-blue));
+    border: none;
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(45deg, var(--dark-blue), var(--primary-blue));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(74, 144, 226, 0.3);
+    color: var(--white);
+}
+
+.btn-secondary-custom {
+    background: linear-gradient(45deg, var(--primary-orange), var(--light-orange));
+    border: none;
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary-custom:hover {
+    background: linear-gradient(45deg, var(--dark-orange), var(--primary-orange));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 140, 66, 0.3);
+    color: var(--white);
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(135deg, var(--light-blue) 0%, rgba(255, 255, 255, 0.8) 50%, var(--light-orange) 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* Card Styles */
+.card-custom {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-header-custom {
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    color: var(--white);
+    padding: 1.5rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card-body-custom {
+    padding: 2rem;
+}
+
+/* Form Styles */
+.form-control-custom {
+    border: 2px solid var(--light-blue);
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.form-control-custom:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+    background: var(--white);
+}
+
+.form-label-custom {
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+/* Hostel Package Cards */
+.hostel-package-card {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.hostel-package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-blue);
+}
+
+.hostel-package-card.boys-hostel {
+    border-left: 5px solid var(--primary-blue);
+}
+
+.hostel-package-card.girls-hostel {
+    border-left: 5px solid var(--primary-orange);
+}
+
+.package-header {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-blue), var(--light-orange));
+    color: var(--white);
+}
+
+.package-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+.package-duration {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.package-features {
+    padding: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+
+.feature-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    color: var(--primary-blue);
+}
+
+/* Dashboard Styles */
+.dashboard-card {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    color: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Footer Styles */
+.footer-custom {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    color: var(--white);
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--light-orange);
+}
+
+.footer-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-link:hover {
+    color: var(--light-orange);
+    padding-left: 5px;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .package-title {
+        font-size: 1.5rem;
+    }
+    
+    .package-price {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .card-body-custom {
+        padding: 1.5rem;
+    }
+    
+    .package-features {
+        padding: 1.5rem;
+    }
+}
