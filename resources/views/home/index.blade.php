@@ -21,7 +21,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="hero-image">
-                    <img src="{{ asset('images/hero-hostel.jpg') }}" alt="University Hostel" class="img-fluid rounded-3 shadow-lg">
+                    <img src="{{ asset('hostel-433403_1280 (1).jpg') }}" alt="University Hostel" class="img-fluid rounded-3 shadow-lg">
                 </div>
             </div>
         </div>
