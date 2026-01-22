@@ -525,16 +525,31 @@ body {
     .dropdown-menu-end { @apply right-0 left-auto; }
     .dropdown-item { @apply flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50; }
 
+    .accordion { @apply overflow-hidden rounded-xl border border-gray-200 bg-white; }
+    .accordion-item { @apply border-b border-gray-200 last:border-b-0; }
+    .accordion-header { @apply m-0; }
+    .accordion-button {
+        @apply flex w-full items-center justify-between bg-white px-4 py-3 text-left font-semibold text-gray-800;
+    }
+    .accordion-button.collapsed { @apply text-gray-700; }
+    .accordion-collapse { @apply hidden; }
+    .accordion-collapse.show { @apply block; }
+    .accordion-body { @apply px-4 pb-4 text-sm text-gray-600; }
+
     .modal { @apply fixed inset-0 z-50 hidden items-center justify-center; }
     .modal.show { @apply flex; }
     .modal-dialog { @apply w-full max-w-lg mx-4; }
     .modal-lg { @apply max-w-3xl; }
+    .modal-dialog-centered { @apply flex min-h-full items-center; }
     .modal-content { @apply bg-white rounded-2xl shadow-2xl overflow-hidden; }
     .modal-header { @apply flex items-center justify-between border-b border-gray-200 px-6 py-4; }
     .modal-body { @apply px-6 py-4; }
     .modal-footer { @apply flex flex-col gap-2 border-t border-gray-200 px-6 py-4 sm:flex-row sm:justify-end; }
 
     .btn-close { @apply text-gray-500 hover:text-gray-700; }
+    .btn-close-white { @apply text-white; }
+
+    .alert-dismissible { @apply relative pr-10; }
 }
 
 .fade {
@@ -557,6 +572,43 @@ body {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
+}
+
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-close {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    position: relative;
+    line-height: 1;
+}
+
+.btn-close::before,
+.btn-close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 2px;
+    background: currentColor;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .sticky-top {
