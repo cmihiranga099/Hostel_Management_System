@@ -510,7 +510,8 @@ body {
 
     .navbar { @apply w-full; }
     .navbar-expand-lg { @apply flex flex-wrap items-center; }
-    .navbar-collapse { @apply w-full lg:flex lg:items-center; }
+    .navbar-collapse { @apply w-full; }
+    .navbar-collapse.show { @apply flex flex-col gap-4 lg:flex-row lg:items-center; }
     .navbar-nav { @apply flex flex-col lg:flex-row; }
     .nav-item { @apply w-full lg:w-auto; }
     .nav-link { @apply inline-flex items-center; }
@@ -518,6 +519,12 @@ body {
 
     .collapse { @apply hidden; }
     .collapse.show { @apply block; }
+    .collapsing {
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.2s ease;
+    }
 
     .dropdown { @apply relative; }
     .dropdown-menu { @apply absolute right-0 mt-2 hidden w-56 rounded-xl border border-gray-200 bg-white shadow-lg; }

@@ -59,48 +59,6 @@
     object-fit: cover;
 }
 
-/* Force visibility of navigation links */
-.navbar-nav {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.navbar-nav .nav-item {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.navbar-nav .nav-link {
-    color: white !important;
-    font-weight: 500 !important;
-    padding: 0.75rem 1.25rem !important;
-    border-radius: 25px !important;
-    margin: 0 0.25rem !important;
-    transition: all 0.3s ease !important;
-    text-decoration: none !important;
-    display: flex !important;
-    align-items: center !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background: transparent !important;
-    border: none !important;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: white !important;
-    background: rgba(255, 255, 255, 0.2) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-nav .nav-link i {
-    margin-right: 0.5rem !important;
-    font-size: 0.9rem !important;
-    color: inherit !important;
-}
 
 /* Register button styling */
 .btn-primary-custom {
@@ -189,29 +147,33 @@
     height: 24px !important;
 }
 
-/* Ensure collapse shows properly */
-.navbar-collapse {
-    display: flex !important;
-    flex-basis: auto !important;
-}
-
-.navbar-collapse.show {
-    display: flex !important;
-}
-
-.navbar-collapse.collapsing {
-    display: flex !important;
-}
 
 /* Mobile responsive */
 @media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: min(320px, 82vw);
+        background: rgba(255, 255, 255, 0.97) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border-top-right-radius: 24px !important;
+        border-bottom-right-radius: 24px !important;
+        padding: 1.5rem !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18) !important;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        z-index: 9999;
+        overflow-y: auto;
+    }
+
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+
     .navbar-nav {
-        background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-        border-radius: 15px !important;
-        padding: 1rem !important;
-        margin-top: 1rem !important;
         width: 100% !important;
     }
     
@@ -227,40 +189,6 @@
     }
 }
 
-/* Force show all navigation elements */
-.navbar-nav,
-.navbar-nav .nav-item,
-.navbar-nav .nav-link {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-/* Ensure Bootstrap classes don't hide elements */
-.d-none {
-    display: none !important;
-}
-
-.navbar-nav .nav-item:not(.d-none) {
-    display: block !important;
-}
-
-/* Additional fallback for visibility */
-nav .container > .navbar-collapse > .navbar-nav {
-    display: flex !important;
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-nav .container > .navbar-collapse > .navbar-nav > .nav-item {
-    display: list-item !important;
-}
-
-nav .container > .navbar-collapse > .navbar-nav > .nav-item > .nav-link {
-    display: block !important;
-    color: white !important;
-}
         
         /* Mobile Responsive */
         @media (max-width: 991px) {
