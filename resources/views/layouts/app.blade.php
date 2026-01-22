@@ -333,6 +333,7 @@
         </div>
     </div>
 </nav>
+<div id="navbarBackdrop" class="navbar-backdrop"></div>
 
         <!-- Enhanced Flash Messages -->
         @if(session('success'))
@@ -548,5 +549,36 @@
     </div>
 
     @stack('scripts')
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapse = document.getElementById('navbarNav');
+            const backdrop = document.getElementById('navbarBackdrop');
+            const toggle = document.querySelector('.navbar-toggler');
+
+            if (!collapse || !backdrop || !toggle) {
+                return;
+            }
+
+            const showBackdrop = () => backdrop.classList.add('show');
+            const hideBackdrop = () => backdrop.classList.remove('show');
+
+            toggle.addEventListener('click', function () {
+                const isOpen = collapse.classList.toggle('show');
+                if (isOpen) {
+                    showBackdrop();
+                } else {
+                    hideBackdrop();
+                }
+            });
+
+            backdrop.addEventListener('click', function () {
+                if (collapse.classList.contains('show')) {
+                    collapse.classList.remove('show');
+                    hideBackdrop();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -239,6 +239,7 @@
         </div>
     </div>
 </nav>
+<div class="navbar-backdrop" :class="{'show': open}" @click="open = false"></div>
 
 <style>
 :root {
